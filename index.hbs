@@ -1,0 +1,37 @@
+{{!< default}}
+
+{{! The comment above "< default" means - insert everything in this file into
+    the {body} of the default.hbs template, which contains our header/footer. }}
+
+{{! The big featured header on the homepage, with the site logo and description }}
+<header class="main-head" {{#if @blog.cover}}style="background-image: url({{@blog.cover}})"{{/if}}>
+    <div class="vertical">
+        <div class="site-head-content inner">
+            {{#if @blog.logo}}<a class="blog-logo" href="{{@blog.url}}"><img src="{{@blog.logo}}" alt="Blog Logo" /></a>{{/if}}
+            <h1 class="blog-title">{{@blog.title}}</h1>
+            <h2 class="blog-description">{{@blog.description}}</h2>
+        </div>
+    </div>
+
+</header>
+
+{{! The main content area on the homepage }}
+{{!Possibly switch these to grab post tags for easy editing}}
+<main class="content" role="main">
+    <div id="home-gfb" class="home-content logo-left">
+        <div class="home-logo"><img src="{{asset "/favicon.ico"}}"/></div> 
+        <div class="home-desc">Ghost for Beginners was built to help those who are new to Ghost. Ghost for Beginners has all the information that one would need to help get their new Ghost blog setup. It goes through the process of installing Ghost, setting up and writing new posts on the blog, and styling that blog to make it look the way one would want. <br><br>A whole <a href="https://ghostforbeginners.com/themes">themes</a> section was added to help those who are not familiar with creating or editing themes, but want features like Google Analytics, lightbox images, etc. Each of these has example code to go along with it and even a GitHub repo so the code can be downloaded and used to see how it would look before it is implimented in their own theme.</div>
+    </div>
+    <div id="home-agt" class="home-content logo-right">
+        <div class="home-logo"><img src="{{asset "/favicon.ico"}}"/></div>
+        <div class="home-desc">All Ghost Themes is a collection of all the Ghost themes we can find. It was built out of necessity for us. We write poss on what themes are our favorite, and which themes are best for certain categories. Finding themes was always very difficult because there were many different places that needed to be searched. <br><br>One day we decided that it would be much easier to create a site that hosts all of these themes and allows them to be quickly viewed without many different page loads. All Ghost Themes is being constantly updated with new themes and has been great for us, as well as others when trying to find a theme that will work best for what is being looked for.</div>
+    </div>
+    <div id="home-aa" class="home-content logo-left">
+        <div class="home-logo"><img src="{{asset "/favicon.ico"}}"/></div>
+        <div class="home-desc">All About Ghost is generally a more developer focused blog. Most of the articles are about customizing Ghost to fit the environment you are looking for. It is kind of a knowledge dump of things we have learned through out the process of using and experimenting with Ghost. <br><br>This site was created back when Ghost was first introduced to the public because we were running into problems with installs and decide to start blogging about these problems to help others. From there, it has grown to be much more than just problems with Ghost and covers a variety of topics for everyone.</div>
+    </div>
+    <div id="home-ht" class="home-content logo-right">
+        <div class="home-logo"><img src="{{asset "/favicon.ico"}}"/></div>
+        <div class="home-desc">How to Install Ghost is the original site of the How to Ghost network with articles on how to install Ghost on a varienty of hosting providers. This site was launced at the same time that Ghost was released to the public. At that time, it had around 15 articles. Since then, it has grown to have over 30. <br><br>We realized as we were helping to debug Ghost before release, that many people were going to want instructions and it does vary for some providers. We used this as an opportunity to fill a void and jumpstarted the whole How to Ghost network.</div>
+    </div>
+</main>
