@@ -11,13 +11,13 @@
   -webkit-align-items: center;
   justify-content: center;
   -webkit-justify-content: center;
-  padding: 10px;
+  padding: 15px;
   list-style-type: none;
   font-size: 16px;
   flex-wrap: wrap;
   -webkit-flex-wrap: wrap;
   margin: 0;
-  background-color: #333333; }
+  background-color: #273338; }
   .announcement-flex li {
     text-align: center;
     align-self: stretch;
@@ -29,7 +29,6 @@
 
 .nav-brand-flex {
   margin-right: auto;
-  margin-left: 30px;
   height: 100%;
   display: flex;
   display: -webkit-flex;
@@ -61,7 +60,7 @@
     -webkit-flex: 1;
     align-self: center;
     -webkit-align-self: center;
-    font-size: 2rem;
+    font-size: 16px;
     color: white; }
     .nav-action-flex a:hover {
       color: white; }
@@ -71,7 +70,7 @@
   .nav-action-flex:hover {
     background-color: white; }
   .nav-action-flex button {
-    background-color: #be3912;
+    background-color: #88a3b0;
     margin: 0 30px;
     border: 0 none;
     border-radius: 4px;
@@ -94,22 +93,26 @@
   flex-wrap: wrap;
   -webkit-flex-wrap: wrap;
   list-style-type: none;
-  padding: 10px;
+  padding: 20px;
   margin: 0;
-  background-color: #6d6c84; }
+  background-color: #36464c; }
   .other-sites-flex a {
     height: 100%;
     display: flex;
     display: -webkit-flex;
     text-decoration: none;
     padding: 0 15px;
-    font-size: 1.75rem;
-    color: white; }
+    font-size: 16px;
+    color: #88a3b0; }
     .other-sites-flex a div {
       align-self: center;
       -webkit-align-self: center; }
     .other-sites-flex a:hover {
-      color: white; }
+      color: #e3f2fd; }
+    .other-sites-flex a img {
+      height: 100%;
+      width: 30px;
+      margin-right: 5px; }
 
 /*
  * Current Site's Nav
@@ -334,7 +337,7 @@ main.content {
   justify-content: center;
   -webkit-justify-content: center; }
   .home-logo img {
-    width: 300px;
+    width: 250px;
     align-self: center;
     -webkit-align-self: center; }
 
