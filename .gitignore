@@ -1,3 +1,5 @@
 .sass-cache*
 assets/css/style.css*
 partials/navigation.hbs
+partials/sidebar.hbs
+partials/footer.hbs
