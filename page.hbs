@@ -1,32 +1,57 @@
 {{!< default}}
 
-{{! This is a page template. A page outputs content just like any other post, and has all the same
-    attributes by default, but you can also customise it to behave differently if you prefer. }}
+{{! The comment above "< default" means - insert everything in this file into
+    the {body} of the default.hbs template, which contains our header/footer. }}
 
 <main class="content" role="main">
+    <div class="wrapper flex-wrapper">
+        <div id="content" class="flex-content">
+            <article class="{{post_class}}">
+                {{#post}}
+                <div class="post-wrapper">
+                    <div class="post-content">
+                        <h1 class="post-title">{{{title}}}</h1>
+                        <img src="{{image}}"/>
+                        {{content}}
 
-    <article class="{{post_class}}">
+                        <div id="sharing-icons">
+                            <div id="facebook-share-post">
+                                <div class="fb-like" data-layout="standard" data-action="like" data-show-faces="true" data-share="true"></div>
+                                <div id="fb-root"></div>
+                                <script>(function(d, s, id) {
+                                  var js, fjs = d.getElementsByTagName(s)[0];
+                                  if (d.getElementById(id)) return;
+                                  js = d.createElement(s); js.id = id;
+                                  js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.3";
+                                  fjs.parentNode.insertBefore(js, fjs);
+                                }(document, 'script', 'facebook-jssdk'));</script>
+                            </div>
+                            <div id="twitter-share-post">
+                                <a href="https://twitter.com/share" class="twitter-share-button" data-via="howtoghost">Tweet</a>
+                                <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+                            </div>
+                        </div>
 
-        <header class="post-header">
-            <a class="blog-logo" href="{{@blog.url}}">
-                {{#if @blog.logo}}
-                    <img src="{{@blog.logo}}" alt="Blog Logo" />
-                {{else}}
-                    <span class="blog-title">{{@blog.title}}</span>
-                {{/if}}
-            </a>
-        </header>
+                        <div id="disqus_thread"></div> 
+                        <script type="text/javascript">
+                            /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+                            var disqus_shortname = 'ghostforbeginners'; // required: replace example with your forum shortname
 
-        {{#post}}
+                            /* * * DON'T EDIT BELOW THIS LINE * * */
+                            (function() {
+                                var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+                                dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+                                (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+                            })();
+                        </script>
+                    </div>
+                </div>
+            {{/post}}
+            </article>
+        </div>
+        
+        {{> "sidebar"}}
 
-            <h1 class="post-title">{{{title}}}</h1>
-
-            <section class="post-content">
-                {{content}}
-            </section>
-
-        {{/post}}
-
-    </article>
-
+        <div style="clear:both;"></div>
+    </div>
 </main>
