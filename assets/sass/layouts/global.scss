@@ -18,6 +18,7 @@
 
 .flex-content {
 	flex: 3;
+	-webkit-flex: 3;
 	padding-left: 25px;
 	padding-top: 25px;
 
@@ -28,5 +29,6 @@
 
 .flex-sidebar {
 	flex: 1;
+	-webkit-flex: 1;
 	// width: 200px;
 }
