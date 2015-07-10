@@ -36,12 +36,29 @@ main.content {
 	margin: 20px;
 	flex-wrap: wrap;
 	-webkit-flex-wrap: wrap;
+	max-width: 1100px;
+	margin: 0 auto 25px;
+	border-bottom: 1px solid #494949;
+	padding: 0 20px 25px;
+
+	@media (max-width: 760px) {
+		flex-direction: column;
+		-webkit-flex-direction: column;
+	}
+}
+
+#home-ht {
+	border-bottom: 0;
 }
 
 .logo-left {
 	flex-direction: row-reverse;
 	-webkit-flex-direction: row-reverse;
 
+	@media (max-width: 760px) {
+		flex-direction: column;
+		-webkit-flex-direction: column;
+	}
 }
 
 .home-logo {
@@ -50,6 +67,7 @@ main.content {
 	display: -webkit-flex;
 	justify-content: center;
 	-webkit-justify-content: center;
+	margin: auto;
 
 	img {
 		width: 250px;
