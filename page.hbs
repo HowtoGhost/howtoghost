@@ -11,7 +11,11 @@
                 <div class="post-wrapper">
                     <div class="post-content">
                         <h1 class="post-title">{{{title}}}</h1>
-                        <img src="{{image}}"/>
+                        {{#if image}}
+                            <img src="{{image}}" />
+                        {{else}}
+                        {{/if}}
+
                         {{content}}
 
                         <div id="sharing-icons">
