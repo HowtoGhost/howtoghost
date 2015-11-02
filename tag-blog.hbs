@@ -17,6 +17,10 @@
                 </header>
                 <section class="post-excerpt">
                     <p class="post-info">{{date published_at format="DD MMMM, YYYY"}} - {{tags separator=", " prefix="Tags: "}}
+                    {{#if image}}
+                         <img class="post-header-img" src="{{image}}" />
+                    {{else}}
+                    {{/if}}
                     <p class="post-words">{{content}}</p>
                 </section>
             </article>
