@@ -105,3 +105,51 @@
 .post-header-img {
 	width: 100%;
 }
+.post-info {
+	display: flex;
+	display: -webkit-flex;
+	height: 50px;
+
+	div {
+		align-self: center;
+		-webkit-align-self: center;
+	}
+
+	.author-info {
+		display: flex;
+		display: -webkit-flex;
+		padding-right: 5px;
+		height: 100%;
+
+		a {
+			align-self: center;
+		}
+
+		.author-img {
+			align-self: center;
+		    -webkit-align-self: center;
+		    padding-right: 10px;
+		}
+
+		.author-image {
+			position: relative;
+		    display: block;
+		    width: 35px;
+		    height: 35px;
+		    background-position: center center;
+		    background-size: cover;
+		    border-radius: 35px;
+		}
+	}
+
+	.post-date-tags {
+		height: 100%;
+		display: flex;
+		display: -webkit-flex;
+
+		p {
+			margin: 0;
+			align-self: center;
+		}
+	}
+}

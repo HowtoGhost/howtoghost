@@ -16,7 +16,19 @@
                     <h2 class="post-title"><a href="{{url}}">{{{title}}}</a></h2>
                 </header>
                 <section class="post-excerpt">
-                    <p class="post-info">{{date published_at format="DD MMMM, YYYY"}} - {{tags separator=", " prefix="Tags: "}}
+                    <div class="post-info">
+                        <div class="author-info">
+                            <a class="author-img" href={{author.website}}>
+                                <span class="author-image" style="background-image:url({{author.image}})"></span>
+                            </a> 
+                            <a class="author-name" href={{author.website}}>
+                                <p>{{author.name}}</p>
+                            </a>
+                        </div>
+                        <div>
+                            <p> - {{date published_at format="DD MMMM, YYYY"}}{{#if tags}} - {{tags separator=", " prefix="Tags: "}}{{/if}}</p>
+                        </div>
+                    </div>
                     {{#if image}}
                          <img class="post-header-img" src="{{image}}" />
                     {{else}}
